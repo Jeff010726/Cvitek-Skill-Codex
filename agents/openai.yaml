@@ -1,0 +1,4 @@
+interface:
+  display_name: "CVitek SDK"
+  short_description: "Navigate CVitek and Sophgo SDK workflows"
+  default_prompt: "Use $cvitek-sdk to inspect this CVitek or Sophgo SDK repo, identify the chip family, run the bundled probe, and guide the safest next build or documentation step."
