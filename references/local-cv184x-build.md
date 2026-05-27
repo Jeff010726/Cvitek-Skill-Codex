@@ -40,7 +40,16 @@ build_osdrv
 build_middleware
 ```
 
-5. Packaging-related functions are part of the same shell-function surface:
+5. For local rebuilds after source changes, use the paired clean/build target only when needed:
+
+```sh
+clean_uboot && build_uboot
+clean_kernel && build_kernel
+clean_osdrv && build_osdrv && pack_rootfs
+clean_middleware && build_middleware && pack_rootfs
+```
+
+6. Packaging-related functions are part of the same shell-function surface:
 
 ```sh
 pack_cfg
@@ -51,13 +60,13 @@ copy_tools
 pack_upgrade
 ```
 
-6. Use full build only for complete image generation:
+7. Use full build only for complete image generation:
 
 ```sh
 build_all
 ```
 
-7. Check output under:
+8. Check output under:
 
 ```sh
 install/soc_<project>
@@ -70,6 +79,8 @@ install/soc_<project>
 - Board enumeration is backed by `build/scripts/boards_scan.py`, so prefer discovery over hardcoding board names.
 - The repo README documents the expected high-level flow and example output layout.
 - `build_all()` does not cover every packaging helper. Functions such as `pack_boot`, `pack_gpt`, `pack_pq`, and `pack_prog_img` remain explicit actions outside the default composed flow.
+- CV184X documentation repeatedly uses board-specific paths under `build/boards/cv184x/<board>/...`; always verify the selected board directory before quoting exact filenames.
+- Some partial-build guidance assumes at least one successful full build has already produced dependencies and output directories. Check current artifacts before promising a partial target is enough.
 
 ## Safe Usage Rules
 
@@ -77,4 +88,5 @@ install/soc_<project>
 - Do not guess board names when `defconfig <chip>` can enumerate them.
 - Use targeted build functions unless the user explicitly needs a packaged full image.
 - If the task is only about packaging, confirm the required build artifacts exist before jumping straight to `pack_*`.
+- Do not mix top-level images in `install/soc_<project>` with raw images in `install/soc_<project>/rawimages`; burning tools may require one or the other.
 - If README examples and live script behavior disagree, trust `envsetup_soc.sh`, `common_functions.sh`, and live `defconfig` output.

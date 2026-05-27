@@ -38,13 +38,16 @@ For documentation-heavy requests:
 
 1. Load [references/source-map.md](references/source-map.md) first to map the user request to the right official family entrypoints.
 2. Load the matching family reference to see the document catalog that is visible on the official index page.
-3. Load [references/tpu-sdk-common.md](references/tpu-sdk-common.md) whenever the task involves TPU model conversion, TPU runtime, docker setup, or TPU sample packages.
-4. Keep dynamic download details conservative when an official page says versions or package names can change.
+3. For CV184X BSP, MPI, ISP, sensor, burning, security, peripheral, RTOS, or display questions, load [references/cv184x-doc-index.md](references/cv184x-doc-index.md) first, then load the narrower CV184X topic reference listed there.
+4. Load [references/tpu-sdk-common.md](references/tpu-sdk-common.md) whenever the task involves TPU model conversion, TPU runtime, docker setup, or TPU sample packages.
+5. Keep dynamic download details conservative when an official page says versions or package names can change.
 
 Default safety rules:
 
 - Do not assume all CVitek or Sophgo families share the same workflow.
 - Do not default to `clean_all` or `build_all` unless the user explicitly wants a full rebuild or packaging pass.
+- Treat CV184X eFuse and secure-boot writes as high-risk irreversible operations. Verify board, image, key material, and live command names before suggesting any `efusew` action.
+- Do not mix SD/USB/TFTP/programmer image formats. Confirm whether the task needs top-level images, `rawimages/`, `upgrade.zip`, signed or encrypted FIP, or SPINAND programmer FIP preprocessing.
 - If a family is only partially documented in this skill, stay in discovery mode and avoid strong assumptions.
 
 ## Load These References
@@ -53,6 +56,10 @@ Default safety rules:
 - Load [references/source-map.md](references/source-map.md) when the task originates from `sdk-details.md` or starts from official entrypoint selection.
 - Load [references/repo-workflow-common.md](references/repo-workflow-common.md) for shared repo triage, build hygiene, and failure classification rules.
 - Load [references/local-cv184x-build.md](references/local-cv184x-build.md) when the local repo matches the CV184X-style `envsetup + defconfig + build_*` workflow.
+- Load [references/cv184x-doc-index.md](references/cv184x-doc-index.md) when a CV184X question is documentation-heavy or spans multiple BSP/MPI manuals.
+- Load [references/cv184x-system-burning-security.md](references/cv184x-system-burning-security.md) for CV184X Linux BSP, SDK compilation, rootfs, partitioning, U-Boot, boot logo, burning, secure boot, eFuse, or release hardening.
+- Load [references/cv184x-media-isp.md](references/cv184x-media-isp.md) for CV184X MPI media pipelines, sensor bring-up, MIPI, ISP, PQ tuning, display, GFBG, TDE, VENC rate control, smart coding, LDC, or TDL C API.
+- Load [references/cv184x-peripherals-rtos.md](references/cv184x-peripherals-rtos.md) for CV184X Ethernet, USB, SD/MMC, I2C, SPI, GPIO, UART, watchdog, PWM, ADC, pinmux, DMA, Wi-Fi, RTC, audio tuning, RT-Thread, AliOS, IPCM, or CIPHER.
 - Load [references/family-180x-181x.md](references/family-180x-181x.md) for cv180x or cv181x download and documentation entrypoints.
 - Load [references/family-184x.md](references/family-184x.md) for cv184x materials and the strongest currently validated local workflow pattern.
 - Load [references/family-cv186-bm1688.md](references/family-cv186-bm1688.md) for CV186 or BM1688 entrypoints, but keep assumptions conservative until a real repo confirms the workflow.

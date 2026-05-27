@@ -10,7 +10,9 @@ This reference combines `/home/jeff/projects/cvitek-skill/sdk-details.md`, the o
 - `https://developer.sophgo.com/thread/822.html`
 - `https://github.com/sophgo/sophpi`
 
-and the validated local repo at `/home/jeff/projects/SDK_CV184X`.
+the validated local repo at `/home/jeff/projects/SDK_CV184X`, and the local PDF bundle:
+
+- `/home/jeff/projects/cvitek-skill/CV184x BSP + MPI SDK 开发文档汇总`
 
 ## Downloads And Docs
 
@@ -93,10 +95,22 @@ Trust this pattern when the repo contains:
 
 If these are missing or renamed, shift back to repo discovery mode before recommending commands.
 
+## Local BSP And MPI PDF Bundle
+
+For detailed CV184X software questions, use the local PDF-derived references before giving final workflow advice:
+
+- [cv184x-doc-index.md](cv184x-doc-index.md) maps every local PDF to the correct topic.
+- [cv184x-system-burning-security.md](cv184x-system-burning-security.md) covers Linux BSP, SDK compilation, partitions, rootfs, U-Boot, boot logo, burning, secure boot, eFuse, and release hardening.
+- [cv184x-media-isp.md](cv184x-media-isp.md) covers MPI, sensor, MIPI, ISP, PQ, display, GFBG, TDE, VENC, LDC, and TDL C API.
+- [cv184x-peripherals-rtos.md](cv184x-peripherals-rtos.md) covers peripheral drivers, Wi-Fi, RTC, audio, RT-Thread, AliOS, IPCM, and CIPHER.
+
+The PDF text extraction quality is uneven. Use these references for routing and stable rules, but inspect the original PDF and live SDK files for exact signatures, register values, board paths, and irreversible operations.
+
 ## Priority Guidance
 
 - Prefer `build_kernel`, `build_uboot`, `build_osdrv`, and other local targets over `build_all`.
 - Use the repo files as the source of truth for exact board names and available build functions.
 - If the user asks for a full firmware image or upgrade package, verify that the repo still exposes the packaging functions before proposing them.
 - For documentation requests, answer from the official CV184X software and HDK catalogs first, then align the answer with the validated local repo if the question becomes repo-specific.
+- For CV184X BSP/MPI documentation requests, route through the local PDF-derived references and be explicit when a command must be verified against the selected board.
 - If README snippets disagree with live `defconfig` output or the current scripts, trust the current repo.
