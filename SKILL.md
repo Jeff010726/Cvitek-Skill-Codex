@@ -49,7 +49,7 @@ Default safety rules:
 - Do not default to `clean_all` or `build_all` unless the user explicitly wants a full rebuild or packaging pass.
 - Treat CV184X eFuse and secure-boot writes as high-risk irreversible operations. Verify board, image, key material, and live command names before suggesting any `efusew` action.
 - Do not mix SD/USB/TFTP/programmer image formats. Confirm whether the task needs top-level images, `rawimages/`, `upgrade.zip`, signed or encrypted FIP, or SPINAND programmer FIP preprocessing.
-- Do not commit datasheets, confidential PDFs, extracted tables, customer-marked content, or long verbatim excerpts. Use local datasheets for verification, then answer with minimal derived guidance and cite the need to check the local PDF for exact values.
+- Do not commit datasheets, confidential PDFs, extracted tables, customer-marked content, or long verbatim excerpts. Preserve compact derived facts in references, and require source datasheet or board-material checks for exact electrical, timing, pin, package, power, or strap values.
 - If a family is only partially documented in this skill, stay in discovery mode and avoid strong assumptions.
 
 ## Load These References
