@@ -1,6 +1,6 @@
 # Local CV184X Build Workflow
 
-Use this reference when working in `/home/jeff/projects/SDK_CV184X` or another repo with the same build layout.
+Use this reference when working in a CV184X-style SDK repo with the same `build/envsetup_soc.sh`, `defconfig`, and `build_*` layout.
 
 ## Validated Entry Files
 

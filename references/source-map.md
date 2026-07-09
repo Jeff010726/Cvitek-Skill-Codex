@@ -1,6 +1,6 @@
-# Source Map From sdk-details.md
+# Official Entry Point Map
 
-Use this reference when the task starts from `/home/jeff/projects/cvitek-skill/sdk-details.md` and you need the exact official entrypoints organized by family.
+Use this reference when the user needs the exact official entrypoints organized by family. These entries are embedded in the skill so an installed copy does not need any local seed file.
 
 ## CV180X And CV181X
 
@@ -35,5 +35,5 @@ Use this reference when the task starts from `/home/jeff/projects/cvitek-skill/s
 
 ## Working Rule
 
-- Treat this file as the authoritative mapping of every entry present in `sdk-details.md`.
+- Treat this file as the authoritative embedded mapping of the user-provided official entrypoints.
 - After choosing the family, load the matching family reference and the TPU SDK reference when model conversion or runtime packaging is involved.

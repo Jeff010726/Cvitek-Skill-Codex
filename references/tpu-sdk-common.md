@@ -6,7 +6,7 @@ Use this reference when the user needs TPU SDK materials for CV-series chips, in
 
 - Official index: `https://developer.sophgo.com/thread/473.html`
 
-This page was live-checked on 2026-04-21 and should still be re-checked if download details matter.
+The exact package versions and filenames may change. Re-check the official index when download details matter.
 
 ## What The Official Thread Provides
 

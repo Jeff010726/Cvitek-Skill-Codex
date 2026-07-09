@@ -4,13 +4,14 @@ Use this reference when the user is targeting `cv180x` or `cv181x`, or asks for 
 
 ## Source Material
 
-This reference is derived from `/home/jeff/projects/cvitek-skill/sdk-details.md` and the official pages:
+This reference distills the user-provided official entrypoints plus public Sophgo materials into an installed, offline-usable reference:
 
 - `https://developer.sophgo.com/thread/471.html`
 - `https://developer.sophgo.com/thread/472.html`
 - `https://github.com/sophgo/sophpi`
+- `https://developer.sophgo.com/thread/473.html`
 
-Local chip datasheets may also exist under `/home/jeff/projects/cvitek-skill/.datasheet/`; use [chip-datasheet-local.md](chip-datasheet-local.md) for local-only datasheet routing and publication boundaries.
+Chip-level facts for CV1810H, CV1811H, CV1812H, and CV1813H have been distilled into [chip-datasheet-local.md](chip-datasheet-local.md). Use original datasheets only for exact pin, electrical, timing, power, package, and strap values.
 
 ## Downloads And Docs
 
@@ -102,6 +103,7 @@ Important boundaries:
 - Use the SDK page as the document catalog for software bring-up, BSP, MPI, security, ISP, screen, storage, and production-flow questions.
 - Use the HDK page when the user needs package-level board hardware documents rather than software manuals.
 - Use the TPU SDK reference separately; do not mix TPU model-conversion guidance into the BSP workflow unless the user is explicitly crossing into TPU work.
+- Use [chip-datasheet-local.md](chip-datasheet-local.md) for installed, distilled CV181x silicon capability facts when no datasheet is available locally.
 
 ## Working Rules
 
@@ -109,7 +111,7 @@ Important boundaries:
 - If a local repo exists, inspect it before recommending build commands.
 - If the repo exposes `build/envsetup_soc.sh`, `defconfig`, and `build_*` functions, reuse the common workflow reference.
 - If the repo shape differs, classify the difference first and keep recommendations local to what is actually present.
-- For chip-level pin, package, power, timing, boot strap, or electrical questions, inspect local datasheets when present, but do not publish confidential or extracted datasheet tables into this skill or GitHub.
+- For chip-level pin, package, power, timing, boot strap, or electrical questions, start from the distilled datasheet reference, then require original hardware documents for exact values.
 
 ## What To Avoid
 

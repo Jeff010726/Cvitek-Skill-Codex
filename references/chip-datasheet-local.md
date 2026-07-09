@@ -1,16 +1,10 @@
-# Local Chip Datasheets
+# Chip Datasheet Summary
 
 Use this reference when the user asks chip-level hardware questions: pin descriptions, boot mode strap pins, package and ballout, power sequencing, electrical characteristics, timing, reset, clock, eFuse silicon capabilities, or peripheral limits that are below the SDK/manual layer.
 
-## Local-Only Source Rule
+## Source And Publication Rule
 
-Local datasheets may exist under:
-
-```text
-/home/jeff/projects/cvitek-skill/.datasheet/
-```
-
-These PDFs are source material only. Do not commit them or copy their raw tables into this repository. Some local files may carry confidential, customer, or no-disclosure markings even when the filename sounds public.
+This reference distills chip-level facts from datasheets so the installed skill remains useful without the original PDFs. Datasheet PDFs are source material only. Do not commit them or copy their raw tables into this repository. Some source files may carry confidential, customer, or no-disclosure markings even when the filename sounds public.
 
 The skill should still preserve compact derived facts that are needed by an installer who does not have the PDFs. Keep those facts summarized and operational; avoid long verbatim passages and avoid reproducing full datasheet tables.
 
@@ -18,7 +12,7 @@ The skill should still preserve compact derived facts that are needed by an inst
 
 It is acceptable to preserve:
 
-- which chip family a local datasheet covers
+- which chip family the distilled datasheet facts cover
 - high-level module capabilities and family differences
 - boot source support and boot-strap behavior that affects board bring-up
 - interface counts and supported peripheral classes
@@ -33,14 +27,14 @@ It is not acceptable to preserve:
 - long verbatim passages
 - exhaustive voltage, timing, package, or pin values that would recreate the datasheet
 
-## Known Local Datasheet Coverage
+## Distilled Datasheet Coverage
 
-The current local `.datasheet/` directory has been observed to contain datasheets covering:
+This reference currently distills datasheet facts covering:
 
 - `CV1842H-P` and `CV1843H-P`
 - `CV1810H`, `CV1811H`, `CV1812H`, and `CV1813H`
 
-Treat this as a local workspace fact, not a public download catalog. If the exact filename or version matters, list `.datasheet/` locally and inspect the matching PDF.
+Treat this as an embedded capability summary, not a complete datasheet replacement. If the exact filename, version, pin value, package value, electrical value, or timing value matters, inspect the original vendor datasheet or board hardware package.
 
 ## When To Use Datasheets Instead Of SDK Manuals
 
@@ -148,7 +142,7 @@ Important boundaries:
 
 - Boot strap behavior is a chip fact, but the board resistor population is a board fact.
 - Peripheral capability in the datasheet does not prove the SDK board enables that peripheral.
-- Electrical values must come from the local PDF and board design review, not from memory.
+- Electrical values must come from the original datasheet and board design review, not from memory.
 - Secure boot requires both silicon capability and SDK image/eFuse flow; also load [cv184x-system-burning-security.md](cv184x-system-burning-security.md).
 
 ## CV1810H, CV1811H, CV1812H, And CV1813H Routing
@@ -208,14 +202,14 @@ Important boundaries:
 
 - CV181x public SDK references remain the primary public routing source. Use [family-180x-181x.md](family-180x-181x.md) for download and SDK document entrypoints.
 - Do not infer CV181x build or board workflow from CV184X without probing the repo.
-- Do not publish raw local datasheet tables to GitHub or generated docs.
+- Do not publish raw datasheet tables to GitHub or generated docs.
 
 ## Answering Rules
 
 - First classify whether the question is chip-level, board-level, SDK-level, or app/API-level.
-- For chip-level facts, inspect the local datasheet in `.datasheet/`.
+- For chip-level facts, start from this distilled summary.
 - For board-level facts, ask for or inspect the schematic/HDK/board DTS; do not use datasheet pin capability as proof of actual routing.
 - For SDK-level facts, inspect the live repo and relevant SDK manual.
 - For exact electrical, timing, pin, package, boot strap, or power values, answer only after checking the source datasheet, schematic, or HDK. If the value is not already summarized here, say it must be verified from the original hardware material.
 - Keep public or committed skill content at summarized-fact granularity.
-- Never add `.datasheet/` or PDF originals to git history.
+- Never add datasheet PDFs or raw extracted datasheet tables to git history.

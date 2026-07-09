@@ -4,7 +4,7 @@ Use this reference for CV184X Linux BSP, SDK compilation, rootfs, partitioning, 
 
 ## High-Confidence Build Surface
 
-The local CV184X manuals and repo agree on this base order:
+The distilled CV184X manuals and validated repo workflow evidence agree on this base order:
 
 ```sh
 source build/envsetup_soc.sh

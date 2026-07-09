@@ -4,7 +4,7 @@ Use this reference when the user is targeting `CV186` or `BM1688`.
 
 ## Source Material
 
-This reference is derived from `/home/jeff/projects/cvitek-skill/sdk-details.md` and the official materials page:
+This reference distills the user-provided official materials hub plus previously observed Sophgo material listings into an installed, offline-usable reference:
 
 - `https://developer.sophgo.com/site/index/material/101/all.html`
 
@@ -14,7 +14,7 @@ This reference is derived from `/home/jeff/projects/cvitek-skill/sdk-details.md`
 
 ## Materials Visible On The Official Page
 
-The materials page currently exposes BM1688 and CV186AH SDK releases plus document entrypoints. Live-checked page content on 2026-04-21 included:
+The materials hub has exposed BM1688 and CV186AH SDK releases plus document entrypoints. Because package versions may change, treat version names below as a useful snapshot and re-check the hub when precise downloads matter.
 
 ### Release Track Visible On The Page
 

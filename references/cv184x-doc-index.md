@@ -1,16 +1,12 @@
-# CV184X BSP And MPI Document Index
+# CV184X BSP And MPI Distilled Document Index
 
-Use this reference when the user asks about the local document bundle `CV184x BSP + MPI SDK 开发文档汇总`, or when a CV184X question spans more than one manual.
+Use this reference when a CV184X question spans more than one BSP, MPI, ISP, peripheral, RTOS, burning, or security manual. It is an installed index of distilled document coverage; original vendor PDFs are not required for normal use.
 
 ## Source Material
 
-This reference is derived from the local PDF bundle at:
+This reference was distilled from the CV184X BSP + MPI SDK document collection. The specific topic summaries live in the linked references so installers can use the skill without the original documents.
 
-```text
-/home/jeff/projects/cvitek-skill/CV184x BSP + MPI SDK 开发文档汇总
-```
-
-PDF text extraction is imperfect for these files, so treat this index as a routing map. When an exact command, path, option, register value, or API signature matters, inspect the PDF and the current SDK repo before answering.
+When an exact command, board path, option, register value, electrical value, or API signature matters, verify against the selected SDK repo, HDK, schematic, datasheet, or original vendor document.
 
 ## Topic Routing
 
@@ -102,8 +98,8 @@ PDF text extraction is imperfect for these files, so treat this index as a routi
 
 ## Working Rules
 
-- Do not answer a CV184X documentation question from only one generic family page when a local PDF manual exists for the topic.
-- Do not answer chip electrical or pinout questions from SDK manuals alone. Route to the local datasheet, then cross-check with board files or schematics.
+- Do not answer a CV184X documentation question from only one generic family page when a distilled topic reference exists for the topic.
+- Do not answer chip electrical or pinout questions from SDK manuals alone. Route to the datasheet summary, then cross-check with board files or schematics.
 - Do not promote examples from one boot mode or OS to another without checking the manual. Linux shell, RT-Thread MSH, AliOS CLI, and U-Boot commands are different command surfaces.
 - Do not mix media layers: `VO`, `GFBG`, `TDE`, panel configuration, and boot logo are related but separate.
 - Do not mix burning formats: SD, USB, TFTP, programmer, raw images, `upgrade.zip`, signed FIP, encrypted FIP, and SPINAND preprocessed FIP have different handling rules.

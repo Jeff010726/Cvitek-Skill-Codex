@@ -38,7 +38,7 @@ For documentation-heavy requests:
 
 1. Load [references/source-map.md](references/source-map.md) first to map the user request to the right official family entrypoints.
 2. Load the matching family reference to see the document catalog that is visible on the official index page.
-3. For chip-level hardware questions such as pin descriptions, boot strap pins, power sequencing, electrical characteristics, packaging, timing, or peripheral silicon capabilities, load [references/chip-datasheet-local.md](references/chip-datasheet-local.md) and inspect local datasheets only when present.
+3. For chip-level hardware questions such as pin descriptions, boot strap pins, power sequencing, electrical characteristics, packaging, timing, or peripheral silicon capabilities, load [references/chip-datasheet-local.md](references/chip-datasheet-local.md) first; it contains distilled datasheet facts and explains when original hardware documents are still required.
 4. For CV184X BSP, MPI, ISP, sensor, burning, security, peripheral, RTOS, or display questions, load [references/cv184x-doc-index.md](references/cv184x-doc-index.md) first, then load the narrower CV184X topic reference listed there.
 5. Load [references/tpu-sdk-common.md](references/tpu-sdk-common.md) whenever the task involves TPU model conversion, TPU runtime, docker setup, or TPU sample packages.
 6. Keep dynamic download details conservative when an official page says versions or package names can change.
@@ -55,7 +55,7 @@ Default safety rules:
 ## Load These References
 
 - Run [scripts/probe_sdk.sh](scripts/probe_sdk.sh) first for local repo triage.
-- Load [references/source-map.md](references/source-map.md) when the task originates from `sdk-details.md` or starts from official entrypoint selection.
+- Load [references/source-map.md](references/source-map.md) when the task starts from official entrypoint selection or the user needs family-level download and documentation routing.
 - Load [references/repo-workflow-common.md](references/repo-workflow-common.md) for shared repo triage, build hygiene, and failure classification rules.
 - Load [references/local-cv184x-build.md](references/local-cv184x-build.md) when the local repo matches the CV184X-style `envsetup + defconfig + build_*` workflow.
 - Load [references/chip-datasheet-local.md](references/chip-datasheet-local.md) for chip-level pin, package, electrical, power, boot strap, timing, or silicon capability questions.

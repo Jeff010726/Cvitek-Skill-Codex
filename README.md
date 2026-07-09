@@ -36,6 +36,7 @@ selection, targeted builds, packaging, and first-pass failure diagnosis.
 - Prefer `defconfig`-based board discovery over hardcoded board guesses
 - Prefer targeted `build_*` commands over full rebuilds
 - Separate repo triage, build guidance, packaging guidance, and documentation lookup
+- Carry distilled family entrypoints, document catalogs, CV184X BSP/MPI topic summaries, and chip datasheet summaries so the skill remains useful without vendor PDF originals
 
 ## Quick Start
 
@@ -62,3 +63,4 @@ $cvitek-sdk 帮我确认这份 SDK 应该先 source 哪个 envsetup，再列出�
 - The runtime behavior is defined by `SKILL.md`.
 - The references are loaded on demand to keep the active context small.
 - The probe script is intended to be run against a local SDK checkout, not this repository itself.
+- The skill intentionally does not ship vendor PDF originals, but it does ship compact derived facts and routing rules.
