@@ -14,6 +14,8 @@ PDF text extraction is imperfect for these files, so treat this index as a routi
 
 ## Topic Routing
 
+- Chip-level hardware questions such as pins, boot straps, package, voltage domains, electrical characteristics, power sequencing, clocks, resets, or silicon peripheral capabilities:
+  load [chip-datasheet-local.md](chip-datasheet-local.md).
 - Linux BSP, SDK build, rootfs, U-Boot, partitions, boot logo, burning, secure boot, eFuse, and release hardening:
   load [cv184x-system-burning-security.md](cv184x-system-burning-security.md).
 - MPI media pipelines, sensor, MIPI, ISP, PQ, display, VENC, LDC, GFBG, TDE, and TDL C API:
@@ -101,6 +103,7 @@ PDF text extraction is imperfect for these files, so treat this index as a routi
 ## Working Rules
 
 - Do not answer a CV184X documentation question from only one generic family page when a local PDF manual exists for the topic.
+- Do not answer chip electrical or pinout questions from SDK manuals alone. Route to the local datasheet, then cross-check with board files or schematics.
 - Do not promote examples from one boot mode or OS to another without checking the manual. Linux shell, RT-Thread MSH, AliOS CLI, and U-Boot commands are different command surfaces.
 - Do not mix media layers: `VO`, `GFBG`, `TDE`, panel configuration, and boot logo are related but separate.
 - Do not mix burning formats: SD, USB, TFTP, programmer, raw images, `upgrade.zip`, signed FIP, encrypted FIP, and SPINAND preprocessed FIP have different handling rules.

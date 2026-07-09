@@ -1,0 +1,6 @@
+.datasheet/
+CV184x BSP + MPI SDK 开发文档汇总/
+*.pdf
+*.PDF
+__pycache__/
+*.pyc

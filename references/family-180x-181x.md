@@ -10,6 +10,8 @@ This reference is derived from `/home/jeff/projects/cvitek-skill/sdk-details.md`
 - `https://developer.sophgo.com/thread/472.html`
 - `https://github.com/sophgo/sophpi`
 
+Local chip datasheets may also exist under `/home/jeff/projects/cvitek-skill/.datasheet/`; use [chip-datasheet-local.md](chip-datasheet-local.md) for local-only datasheet routing and publication boundaries.
+
 ## Downloads And Docs
 
 - Toolchain: `https://sophon-file.sophon.cn/sophon-prod-s3/drive/23/03/07/16/host-tools.tar.gz`
@@ -107,6 +109,7 @@ Important boundaries:
 - If a local repo exists, inspect it before recommending build commands.
 - If the repo exposes `build/envsetup_soc.sh`, `defconfig`, and `build_*` functions, reuse the common workflow reference.
 - If the repo shape differs, classify the difference first and keep recommendations local to what is actually present.
+- For chip-level pin, package, power, timing, boot strap, or electrical questions, inspect local datasheets when present, but do not publish confidential or extracted datasheet tables into this skill or GitHub.
 
 ## What To Avoid
 
